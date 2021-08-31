@@ -4,6 +4,11 @@ class MoviesController < ApplicationController
   def show
     movie = Movie.find_by(title: params[:title])
 
-    render json: movie
+    if movie
+      render json: movie
+    else
+      CreateMovieWorker.perform_async(params[:title])
+      render plain: 'Fetching movie...'
+    end
   end
 end
