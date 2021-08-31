@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_31_190408) do
+ActiveRecord::Schema.define(version: 2021_08_31_191936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_08_31_190408) do
     t.string "box_office"
     t.string "production"
     t.string "website"
+    t.index ["title"], name: "index_movies_on_title"
   end
 
 end
