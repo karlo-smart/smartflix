@@ -7,10 +7,8 @@ RSpec.describe Apis::Omdb::Client do
 
   describe '#call', :vcr do
     it 'returns 200 status' do
-      VCR.use_cassette 'omdb_success' do
-        subject
-        expect(subject.code).to eq(200)
-      end
+      subject
+      expect(subject.code).to eq(200)
     end
   end
 end
