@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=<API_KEY>&t=Up
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 01 Sep 2021 07:29:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Tue, 31 Aug 2021 19:54:52 GMT
+      Last-Modified:
+      - Tue, 31 Aug 2021 18:54:52 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '45276'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 687cc9abccf4581a-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Up","Year":"2009","Rated":"PG","Released":"29 May 2009","Runtime":"96
+        min","Genre":"Animation, Adventure, Comedy","Director":"Pete Docter, Bob Peterson","Writer":"Pete
+        Docter, Bob Peterson, Tom McCarthy","Actors":"Edward Asner, Jordan Nagai,
+        John Ratzenberger","Plot":"78-year-old Carl Fredricksen travels to Paradise
+        Falls in his house equipped with balloons, inadvertently taking a young stowaway.","Language":"English","Country":"United
+        States","Awards":"Won 2 Oscars. 79 wins & 87 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BMTk3NDE2NzI4NF5BMl5BanBnXkFtZTgwNzE1MzEyMTE@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"8.2/10"},{"Source":"Rotten Tomatoes","Value":"98%"},{"Source":"Metacritic","Value":"88/100"}],"Metascore":"88","imdbRating":"8.2","imdbVotes":"966,025","imdbID":"tt1049413","Type":"movie","DVD":"21
+        Nov 2015","BoxOffice":"$293,004,164","Production":"Pixar Animation Studios","Website":"N/A","Response":"True"}'
+    http_version:
+  recorded_at: Wed, 01 Sep 2021 07:29:28 GMT
+recorded_with: VCR 5.1.0
