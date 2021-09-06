@@ -5,6 +5,8 @@ module Apis
     class Client
       include HTTParty
 
+      class OmdbError < StandardError; end
+
       base_uri Rails.application.credentials.omdb[:api_url]
       default_params apikey: Rails.application.credentials.omdb[:api_key]
 
@@ -13,12 +15,24 @@ module Apis
       end
 
       def get_movie
-        self.class.get('', options)
+        begin
+          response = self.class.get('', options)
+
+          raise OmdbError, response['Error'] if failed?(response)
+        rescue OmdbError => e
+          Rails.logger.error e
+        end
+
+        response
       end
 
       private
 
       attr_reader :options
+
+      def failed?(response)
+        response['Response'] == 'False'
+      end
     end
   end
 end
