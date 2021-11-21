@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+docker-compose.yml
+.DS_Store
+.git
+.gitignore
+.rspec
+coverage
+log
+node_modules
+tmp
